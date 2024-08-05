@@ -40,6 +40,7 @@ void MainWindow::startStopRecording()
         }
 
         ui->recordButton->setText("Start Record");
+        ui->frameLabel->clear();
         qDebug() << "FFmpeg output:" << ffmpegProcess->readAllStandardError();
     } else {
         isRecording = true;
@@ -81,6 +82,8 @@ void MainWindow::captureFrame() {
         return;
 
     QPixmap pixmap = screen->grabWindow(0);
+    ui->frameLabel->setPixmap(pixmap.scaledToHeight(360));
+    ui->frameLabel->setAlignment(Qt::AlignCenter);
     QImage img = pixmap.toImage();
     img = img.convertToFormat(QImage::Format_RGB888);
 

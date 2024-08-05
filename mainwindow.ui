@@ -50,27 +50,18 @@
      </rect>
     </property>
    </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
+   <widget class="QLabel" name="frameLabel">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>110</x>
       <y>180</y>
-      <width>391</width>
-      <height>221</height>
+      <width>571</width>
+      <height>231</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="frameLayout">
-     <item>
-      <widget class="QFrame" name="frame">
-       <property name="frameShape">
-        <enum>QFrame::Shape::StyledPanel</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Shadow::Raised</enum>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="text">
+     <string/>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
